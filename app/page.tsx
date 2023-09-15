@@ -1,113 +1,166 @@
-import Image from 'next/image'
+import './page.css';
+import VisitorCounter from '../components/VisitorCounter.js';
+import Footer from '../components/Footer.js';
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <div className="wrapper">
+        <div className="sidebar-wrapper">
+            <div className="profile-container">
+                <h1 className="name">Your Name</h1>
+                <h3 className="tagline">Your Title</h3>
+            </div>
+            
+            {/* <!--//profile-container--> */}
+
+            <div className="contact-container container-block">
+              <h2 className="container-block-title">Contact</h2>
+                <ul className="list-unstyled contact-list">
+                    <li className="email"><i className="fa fa-envelope"></i><a href="###">email address</a></li>
+                    <li className="phone"><i className="fa fa-phone"></i><a href="###">phone number</a></li>
+                    <li className="linkedin"><i className="fa fa-linkedin"></i><a href="###" target="_blank">linkedin/...</a></li>
+                    <li className="medium"><i className="fa fa-medium"></i><a href="###" target="_blank">medium/...</a></li>
+                    <li className="github"><i className="fa fa-github"></i><a href="###" target="_blank">github/...</a></li>
+                    <li className="twitter"><i className="fa fa-twitter"></i><a href="###" target="_blank">@...</a></li>
+                </ul>
+            </div>
+            
+            {/* <!--//contact-container--> */}
+            <div className="education-container container-block">
+                <h2 className="container-block-title">Education</h2>
+                <div className="item">
+                    <h4 className="degree">Degree</h4>
+                    <h5 className="meta">School</h5>
+                    <div className="time">Years in school</div>
+                </div> {/*<!--//item--> */}
+            </div> {/*<!--//education-container-->*/}
+
         </div>
-      </div>
+        
+        {/* <!--//sidebar-wrapper--> */}
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="main-wrapper">
+            <section className="section summary-section">
+                <h2 className="section-title"><i className="fa fa-user"></i>Career Profile</h2>
+                <hr />
+                <div className="summary">
+                    <p>Add text that summarizes your work experience</p>
+                </div> {/*<!--//summary-->*/}
+            </section> {/*<!--//section-->*/}
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <section className="section experiences-section">
+                <h2 className="section-title"><i className="fa fa-bar-chart"></i>Data Engineering & Data Science Experience</h2>
+                <div className="company"><a className="company-header" href="###" target="_blank">Current Company Name,</a> City, State</div>
+                <div className="item">
+                      <div className="meta">
+                        <div className="upper-row">
+                            <h3 className="job-title">Current Job Title</h3>
+                            <div className="time">XXX - Present</div>
+                        </div> {/*<!--//upper-row-->*/}
+                    </div> {/*<!--//meta-->*/}
+                    <div className="details">
+                      <ul className="fa-ul">
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility one.</li>
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility two.</li>
+                      </ul>
+                    </div> {/*<!--//details-->*/}
+                    <br />
+                    <div className="meta">
+                        <div className="upper-row">
+                            <h3 className="job-title">Previous Job Title</h3>
+                            <div className="time">May 2019 - November 2020</div>
+                        </div> {/*<!--//upper-row--> */}
+                    </div> {/*<!--//meta-->*/}
+                    <div className="details">
+                      <ul className="fa-ul">
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility one.</li>
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility two.</li>                
+                      </ul>
+                    </div> {/*<!--//details-->*/}
+                    <br />
+                    <div className="meta">
+                        <div className="upper-row">
+                            <h3 className="job-title">Previous Job Title</h3>
+                            <div className="time">April 2018 - May 2019</div>
+                        </div>{/*<!--//upper-row-->*/}
+                    </div> {/*<!--//meta-->*/}
+                    <div className="details">
+                      <ul className="fa-ul">
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility one.</li>
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility two.</li>                
+                      </ul>
+                    </div> {/*<!--//details--> */}
+                </div> {/*<!--//item-->*/}
+                
+                <hr />
+                <div className="company"><a className="company-header" href="###" target="_blank">Previous Company Name,</a> City, State</div>
+                <div className="item">
+                    <div className="meta">
+                        <div className="upper-row">
+                            <h3 className="job-title">Previous Job Title</h3>
+                            <div className="time">August 2017 - March 2018</div>
+                        </div>{/*<!--//upper-row-->*/}
+                    </div>{/*<!--//meta-->*/}
+                    <div className="details">
+                      <ul className="fa-ul">
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility one.</li>
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility two.</li>                
+                      </ul>
+                    </div>{/*<!--//details-->*/}
+                    <br />
+                    <div className="meta">
+                        <div className="upper-row">
+                            <h3 className="job-title">Previous Job Title</h3>
+                            <div className="time">October 2015 - August 2017</div>
+                        </div>{/*<!--//upper-row-->*/}
+                    </div>{/*<!--//meta-->*/}
+                    <div className="details">
+                      <ul className="fa-ul">
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility one.</li>
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility two.</li>                </ul>
+                    </div>{/*<!--//details-->*/}
+                </div>{/*<!--//item-->*/}
+            </section>{/*<!--//section-->*/}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            <section className="section projects-section">
+                <h2 className="section-title"><i className="fa fa-black-tie"></i>Internships</h2>
+                <hr />
+                <div className="company"><a className="company-header" href="###" target="_blank">Previous Company Name,</a> City, State</div>
+                <div className="item">
+                    <div className="meta">
+                        <div className="upper-row">
+                            <h3 className="job-title">Data Science Intern</h3>
+                            <div className="time">May 2012 - August 2012</div>
+                        </div>{/*<!--//upper-row-->*/}
+                    </div>{/*<!--//meta-->*/}
+                    <div className="details">
+                      <ul className="fa-ul">
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility one.</li>
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility two.</li>                     </ul>
+                    </div>{/*<!--//details-->*/}
+                </div>{/*<!--//item-->*/}
+                <hr />
+                <div className="company"><a className="company-header" href="###" target="_blank">Company Name,</a> City, State</div>
+                <div className="item">
+                    <div className="meta">
+                        <div className="upper-row">
+                            <h3 className="job-title">Data Science Intern</h3>
+                            <div className="time">June 2011 - January 2012</div>
+                        </div>{/*<!--//upper-row-->*/}
+                    </div>{/*<!--//meta-->*/}
+                    <div className="details">
+                      <ul className="fa-ul">
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility one.</li>
+                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility two</li>                     
+                      </ul>
+                    </div>{/*<!--//details-->*/}
+                </div>{/*<!--//item-->*/}
+            </section>
+          </div>
+        </div>{/*<!--//main-body-->*/}
+        {/* <Footer /> */}
     </main>
+    
   )
 }
