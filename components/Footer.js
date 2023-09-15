@@ -36,13 +36,13 @@ export default function Footer() {
           </div>
           <div className="space-x-4 flex flex-row justify-center items-center">
             <a
-              href={userData.socialLinks.github}
+              // href={userData.socialLinks.github}
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
-              <Github />
+              {/* <Github /> */}
             </a>
             <a
-              href={userData.socialLinks.twitter}
+              // href={userData.socialLinks.twitter}
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
               <svg
