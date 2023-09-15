@@ -1,6 +1,6 @@
 import React from "react";
-import userData from "../constants/data";
-import Github from "../icons/Github.js";
+// import userData from "../constants/data";
+// import Github from "../icons/Github.js";
 // import LinkedIn from "../icons/LinkedIn.js"
 // import Nextjs from "../icons/Nextjs.js";
 import Image from 'next/image'
@@ -60,7 +60,7 @@ export default function Footer() {
               // href={userData.socialLinks.linkedin}
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
-              <LinkedIn />
+              {/* <LinkedIn /> */}
             </a>
           </div>
           {/* <div className="flex flex-row justify-center items-center md:justify-end">
