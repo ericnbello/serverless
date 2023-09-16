@@ -8,8 +8,8 @@ export default function Home() {
       <div className="wrapper">
         <div className="sidebar-wrapper">
             <div className="profile-container">
-                <h1 className="name">Your Name</h1>
-                <h3 className="tagline">Your Title</h3>
+                <h1 className="name">Eric Bello</h1>
+                <h3 className="tagline">Cloud Engineer</h3>
             </div>
             
             {/* <!--//profile-container--> */}
