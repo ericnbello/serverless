@@ -1,10 +1,10 @@
-import './page.css';
+import 'app/styles.css';
 import VisitorCounter from '../components/VisitorCounter.js';
 import Footer from '../components/Footer.js';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    // <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="wrapper">
         <div className="sidebar-wrapper">
             <div className="profile-container">
@@ -42,7 +42,9 @@ export default function Home() {
 
         <div className="main-wrapper">
             <section className="section summary-section">
-                <h2 className="section-title"><i className="fa fa-user"></i>Career Profile</h2>
+                <h2 className="section-title">
+                  {/* <i className="fa fa-user"></i> */}
+                  Career Profile</h2>
                 <hr />
                 <div className="summary">
                     <p>Add text that summarizes your work experience</p>
@@ -50,7 +52,9 @@ export default function Home() {
             </section> {/*<!--//section-->*/}
 
             <section className="section experiences-section">
-                <h2 className="section-title"><i className="fa fa-bar-chart"></i>Data Engineering & Data Science Experience</h2>
+                <h2 className="section-title">
+                  {/* <i className="fa fa-bar-chart"></i> */}
+                  Data Engineering & Data Science Experience</h2>
                 <div className="company"><a className="company-header" href="###" target="_blank">Current Company Name,</a> City, State</div>
                 <div className="item">
                       <div className="meta">
@@ -124,7 +128,9 @@ export default function Home() {
             </section>{/*<!--//section-->*/}
 
             <section className="section projects-section">
-                <h2 className="section-title"><i className="fa fa-black-tie"></i>Internships</h2>
+                <h2 className="section-title">
+                  {/* <i className="fa fa-black-tie"></i> */}
+                  Internships</h2>
                 <hr />
                 <div className="company"><a className="company-header" href="###" target="_blank">Previous Company Name,</a> City, State</div>
                 <div className="item">
@@ -158,9 +164,7 @@ export default function Home() {
                 </div>{/*<!--//item-->*/}
             </section>
           </div>
-        </div>{/*<!--//main-body-->*/}
-        {/* <Footer /> */}
-    </main>
-    
+        </div> 
+    // </main>
   )
 }
