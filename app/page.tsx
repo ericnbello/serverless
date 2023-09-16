@@ -1,6 +1,5 @@
-import 'app/styles.css';
-import VisitorCounter from '../components/VisitorCounter.js';
-import Footer from '../components/Footer.js';
+// import VisitorCounter from '../components/VisitorCounter.js';
+// import Footer from '../components/Footer.js';
 
 export default function Home() {
   return (
@@ -14,25 +13,25 @@ export default function Home() {
             
             {/* <!--//profile-container--> */}
 
-            <div className="contact-container container-block">
-              <h2 className="container-block-title">Contact</h2>
+            <div className="contact-container container-block ">
+              <h2 className="container-block-title flex justify-center md:justify-start">Contact</h2>
                 <ul className="list-unstyled contact-list">
-                    <li className="email"><i className="fa fa-envelope"></i><a href="###">email address</a></li>
-                    <li className="phone"><i className="fa fa-phone"></i><a href="###">phone number</a></li>
-                    <li className="linkedin"><i className="fa fa-linkedin"></i><a href="###" target="_blank">linkedin/...</a></li>
-                    <li className="medium"><i className="fa fa-medium"></i><a href="###" target="_blank">medium/...</a></li>
-                    <li className="github"><i className="fa fa-github"></i><a href="###" target="_blank">github/...</a></li>
-                    <li className="twitter"><i className="fa fa-twitter"></i><a href="###" target="_blank">@...</a></li>
+                    <li className="email flex justify-center md:justify-start"><i className="fa fa-envelope"></i><a href="mailto:ericnbello@gmail.com">ericnbello@gmail.com</a></li>
+                    {/* <li className="phone flex justify-center md:justify-start"><i className="fa fa-phone"></i><a href="###">phone number</a></li> */}
+                    <li className="linkedin flex justify-center md:justify-start"><i className="fa fa-linkedin"></i><a rel="noopener" href="https://linkedin.com/in/ericnbello" target="_blank">linkedin/in/ericnbello</a></li>
+                    {/* <li className="medium flex justify-center md:justify-start"><i className="fa fa-medium"></i><a href="###" target="_blank">medium/...</a></li> */}
+                    <li className="github flex justify-center md:justify-start"><i className="fa fa-github"></i><a rel="noopener" href="https://github.com/ericnbello" target="_blank">github/ericnbello</a></li>
+                    <li className="twitter flex justify-center md:justify-start"><i className="fa fa-twitter"></i><a rel="noopener" href="https://twitter.com/ericnbello" target="_blank">@ericnbello</a></li>
                 </ul>
             </div>
             
             {/* <!--//contact-container--> */}
             <div className="education-container container-block">
-                <h2 className="container-block-title">Education</h2>
+                <h2 className="container-block-title flex justify-center md:justify-start">Education</h2>
                 <div className="item">
-                    <h4 className="degree">Degree</h4>
-                    <h5 className="meta">School</h5>
-                    <div className="time">Years in school</div>
+                    <h4 className="degree flex justify-center md:justify-start">Bachelor of Science in Computer Engineering</h4>
+                    <h5 className="meta flex justify-center md:justify-start">Florida International University</h5>
+                    {/* <div className="time flex justify-center md:justify-start">Years in school</div> */}
                 </div> {/*<!--//item--> */}
             </div> {/*<!--//education-container-->*/}
 
@@ -44,7 +43,7 @@ export default function Home() {
             <section className="section summary-section">
                 <h2 className="section-title">
                   {/* <i className="fa fa-user"></i> */}
-                  Career Profile</h2>
+                  Summary</h2>
                 <hr />
                 <div className="summary">
                     <p>Add text that summarizes your work experience</p>
@@ -54,7 +53,7 @@ export default function Home() {
             <section className="section experiences-section">
                 <h2 className="section-title">
                   {/* <i className="fa fa-bar-chart"></i> */}
-                  Data Engineering & Data Science Experience</h2>
+                  Cloud Projects</h2>
                 <div className="company"><a className="company-header" href="###" target="_blank">Current Company Name,</a> City, State</div>
                 <div className="item">
                       <div className="meta">
@@ -130,7 +129,7 @@ export default function Home() {
             <section className="section projects-section">
                 <h2 className="section-title">
                   {/* <i className="fa fa-black-tie"></i> */}
-                  Internships</h2>
+                  Experience</h2>
                 <hr />
                 <div className="company"><a className="company-header" href="###" target="_blank">Previous Company Name,</a> City, State</div>
                 <div className="item">
@@ -168,3 +167,4 @@ export default function Home() {
     // </main>
   )
 }
+
