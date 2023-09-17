@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: 14
       - run: npm install
       - run: npm ci
       - run: npm run build
@@ -28,4 +28,4 @@ jobs:
       - uses: actions/setup-python@v3
       - uses: aws-actions/setup-sam@v2
       - run: sam build --use-container
-      - run: sam deploy --stack-name sam-portfolio --s3-bucket aws-sam-cli-managed-default-samclisourcebucket-1t3ynb1jfs5u3 --capabilities CAPABILITY_IAM --no-confirm-changeset --no-fail-on-empty-changeset
+      - run: sam deploy --stack-name sam-portfolio --s3-bucket ${{ secrets.PACKAGE_BUCKET }} --capabilities CAPABILITY_IAM --no-confirm-changeset --no-fail-on-empty-changeset
