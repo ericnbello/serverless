@@ -1,14 +1,16 @@
 // import VisitorCounter from '../components/VisitorCounter.js';
-// import Footer from '../components/Footer.js';
+import VisitorCounter from '@/components/VisitorCounter.js';
+import Footer from '../components/Footer.js';
+import '../styles/styles.css';
 
 export default function Home() {
   return (
-    // <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="">
       <div className="wrapper">
         <div className="sidebar-wrapper">
             <div className="profile-container">
-                <h1 className="name">Eric Bello</h1>
-                <h3 className="tagline">Cloud Engineer</h3>
+              <h1 className="name">Eric Bello</h1>
+              <h3 className="tagline">Cloud Engineer</h3>
             </div>
             
             {/* <!--//profile-container--> */}
@@ -164,7 +166,8 @@ export default function Home() {
             </section>
           </div>
         </div> 
-    // </main>
+        <Footer />
+    </main>
   )
 }
 

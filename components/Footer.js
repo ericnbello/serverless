@@ -4,13 +4,13 @@ import React from "react";
 // import LinkedIn from "../icons/LinkedIn.js"
 // import Nextjs from "../icons/Nextjs.js";
 import Image from 'next/image'
-// import VisitorCounter from "./VisitorCounter";
+import VisitorCounter from "./VisitorCounter";
 
 const currentYear = new Date().getFullYear();
 
 export default function Footer() {
   return (
-    <div className="bg-[#F1F1F1] dark:bg-gray-900">
+    <div className="bg-[#F1F1F1] dark:bg-gray-900 text-black dark:text-white">
       <div className="max-w-6xl mx-auto px-4 py-10 md:py-20">
         <div className="h-0.5 w-full bg-white dark:bg-gray-700"></div>
         <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between md:items-center mt-8">
@@ -63,9 +63,9 @@ export default function Footer() {
               {/* <LinkedIn /> */}
             </a>
           </div>
-          {/* <div className="flex flex-row justify-center items-center md:justify-end">
+          <div className="flex flex-row justify-center items-center md:justify-end">
             <VisitorCounter />
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
