@@ -1,9 +1,9 @@
 import React from "react";
-// import userData from "../constants/data";
-// import Github from "../icons/Github.js";
-// import LinkedIn from "../icons/LinkedIn.js"
+import userData from "../constants/data";
+import Github from "./icons/Github.js";
+import LinkedIn from "./icons/LinkedIn.js"
 // import Nextjs from "../icons/Nextjs.js";
-import Image from 'next/image'
+// import Image from 'next/image'
 import VisitorCounter from "./VisitorCounter";
 
 const currentYear = new Date().getFullYear();
@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="h-0.5 w-full bg-white dark:bg-gray-700"></div>
         <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between md:items-center mt-8">
           <div className="flex flex-row justify-center">
-            <p>Copyright &copy; { currentYear } - <span><a className="hover:font-bold" href="https://www.github.com/ericnbello">ericnbello</a></span>. </p>
+            <p>Copyright &copy; { currentYear } - <span><a className="text-black dark:text-white hover:font-bold hover:text-black dark:hover:text-white" href="https://www.github.com/ericnbello">ericnbello</a></span>. </p>
           </div>
           <div className="flex flex-row justify-center">
             <p className="flex flex-row">Built with 
@@ -36,13 +36,13 @@ export default function Footer() {
           </div>
           <div className="space-x-4 flex flex-row justify-center items-center">
             <a
-              // href={userData.socialLinks.github}
+              href={userData.socialLinks.github}
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
-              {/* <Github /> */}
+              <Github />
             </a>
             <a
-              // href={userData.socialLinks.twitter}
+              href={userData.socialLinks.twitter}
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
               <svg
@@ -57,10 +57,10 @@ export default function Footer() {
               </svg>
             </a>
             <a
-              // href={userData.socialLinks.linkedin}
+              href={userData.socialLinks.linkedin}
               className="text-base font-normal text-gray-600 dark:text-gray-300"
             >
-              {/* <LinkedIn /> */}
+              <LinkedIn />
             </a>
           </div>
           <div className="flex flex-row justify-center items-center md:justify-end">
