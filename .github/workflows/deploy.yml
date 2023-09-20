@@ -30,4 +30,4 @@ jobs:
             version: 1.97.0
       - run: sam build --use-container
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name sam-portfolio --s3-bucket ${{ secrets.PACKAGE_BUCKET }} --capabilities CAPABILITY_IAM
-        working-directory: ./.aws-sam/
+        working-directory: ./.aws-sam/build/
