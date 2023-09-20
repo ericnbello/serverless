@@ -31,7 +31,7 @@ export default function Home() {
             <div className="education-container container-block">
                 <h2 className="container-block-title flex justify-center md:justify-start">Education</h2>
                 <div className="item">
-                    <h4 className="degree flex justify-center md:justify-start">Bachelor of Science in Computer Engineering</h4>
+                    <h4 className="flex justify-center md:justify-start">Bachelor of Science - Computer Engineering</h4>
                     <h5 className="meta flex justify-center md:justify-start">Florida International University</h5>
                     {/* <div className="time flex justify-center md:justify-start">Years in school</div> */}
                 </div> {/*<!--//item--> */}
@@ -58,13 +58,13 @@ export default function Home() {
                   Skills</h2>
                 <hr />
                 <div className="summary">
-                    <p className='font-bold'>Tools & Software: 
-                      <span className='font-medium'> Amazon Web Services (AWS), Google Cloud Platform (GCP), VMWare, Jenkins</span>
+                    <p className='font-bold'>Platforms: 
+                      <span className='font-medium'> Amazon Web Services (AWS), Google Cloud Platform (GCP), Azure, VMWare</span>
                     </p>
                 </div> {/*<!--//summary-->*/}
                 <div className="summary">
                     <p className='font-bold'>Tools & Software: 
-                      <span className='font-medium'> Terraform, Docker, Active Directory, Office 365, Outlook, Cisco AnyConnect, Duo, Slack</span>
+                      <span className='font-medium'> Terraform, Docker, Jenkins, Active Directory, Office 365, Outlook, Cisco AnyConnect, Duo, Slack</span>
                     </p>
                 </div>
                 <div className="summary">
