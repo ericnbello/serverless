@@ -98,8 +98,8 @@ export default function Home() {
                 <div className="item">
                       <div className="meta">
                         <div className="upper-row">
-                            <h3 className="job-title">Serverless website built with Next.js, Tailwind, and AWS.</h3>
-                            <div className="time">Live demo</div>
+                            {/* <h3 className="job-title">Serverless website built with Next.js, Tailwind, and AWS.</h3> */}
+                            {/* <div className="time">Live demo</div> */}
                         </div> {/*<!--//upper-row-->*/}
                     </div> {/*<!--//meta-->*/}
                     <div className="details">
@@ -123,8 +123,8 @@ export default function Home() {
                 <div className="item">
                       <div className="meta">
                         <div className="upper-row">
-                            <h3 className="job-title">Current Job Title</h3>
-                            <div className="time">Live Demo</div>
+                            {/* <h3 className="job-title">Current Job Title</h3> */}
+                            {/* <div className="time">Live Demo</div> */}
                         </div> {/*<!--//upper-row-->*/}
                     </div> {/*<!--//meta-->*/}
                     <div className="details">
