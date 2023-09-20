@@ -18,7 +18,7 @@ export default function Home() {
             <div className="contact-container container-block ">
               <h2 className="container-block-title flex justify-center md:justify-start">Contact</h2>
                 <ul className="list-unstyled contact-list">
-                    <li className="email flex justify-center md:justify-start"><i className="fa fa-envelope"></i><a href="mailto:ericnbello@gmail.com">hi@ericnbello.com</a></li>
+                    <li className="email flex justify-center md:justify-start"><i className="fa fa-envelope"></i><a href="mailto:hi@ericnbello.com">hi@ericnbello.com</a></li>
                     {/* <li className="phone flex justify-center md:justify-start"><i className="fa fa-phone"></i><a href="###">phone number</a></li> */}
                     <li className="linkedin flex justify-center md:justify-start"><i className="fa fa-linkedin"></i><a rel="noopener" href="https://linkedin.com/in/ericnbello" target="_blank">linkedin/in/ericnbello</a></li>
                     {/* <li className="medium flex justify-center md:justify-start"><i className="fa fa-medium"></i><a href="###" target="_blank">medium/...</a></li> */}
