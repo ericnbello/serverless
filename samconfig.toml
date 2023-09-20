@@ -8,5 +8,5 @@ s3_prefix = "sam-portfolio"
 region = "us-east-1"
 confirm_changeset = false
 capabilities = "CAPABILITY_IAM"
-disable_rollback = false
+disable_rollback = true
 image_repositories = []
