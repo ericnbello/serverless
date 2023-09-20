@@ -106,7 +106,7 @@ export default function Home() {
                       <ul className="fa-ul">
                         <li><i className="fa-li fa fa-angle-right"></i>- Built responsive, serverless site with view counter</li>
                         <li><i className="fa-li fa fa-angle-right"></i>- Website front end is deployed on a custom domain through CloudFront with an S3 origin</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- View counter uses a Lambda function written in Python to update DynamoDB's atomic counter</li>
+                        <li><i className="fa-li fa fa-angle-right"></i>- View counter uses a Lambda function written in Python to update DynamoDB&apos;s atomic counter</li>
                         <li><i className="fa-li fa fa-angle-right"></i>- Uses API Gateway to trigger the function and displays the counter using JavaScript</li>
                         <li><i className="fa-li fa fa-angle-right"></i>- Automated infrastructure using CloudFormation and AWS Serverless Application Model (SAM)</li>
                         <li><i className="fa-li fa fa-angle-right"></i>- ​​Deployed with GitHub Actions for CI/CD pipeline</li>
