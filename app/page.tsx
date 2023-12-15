@@ -18,7 +18,7 @@ export default function Home() {
             <div className="contact-container container-block ">
               <h2 className="container-block-title flex justify-center md:justify-start">Contact</h2>
                 <ul className="list-unstyled contact-list">
-                    <li className="email flex justify-center md:justify-start"><i className="fa fa-envelope"></i><a href="mailto:hi@ericnbello.com">hi@ericnbello.com</a></li>
+                    <li className="email flex justify-center md:justify-start"><i className="fa fa-envelope"></i><a href="mailto:ericnbello@icloud.com">ericnbello@icloud.com</a></li>
                     {/* <li className="phone flex justify-center md:justify-start"><i className="fa fa-phone"></i><a href="###">phone number</a></li> */}
                     <li className="linkedin flex justify-center md:justify-start"><i className="fa fa-linkedin"></i><a rel="noopener" href="https://linkedin.com/in/ericnbello" target="_blank">linkedin/in/ericnbello</a></li>
                     {/* <li className="medium flex justify-center md:justify-start"><i className="fa fa-medium"></i><a href="###" target="_blank">medium/...</a></li> */}
@@ -197,26 +197,26 @@ export default function Home() {
                   Experience</h2>
                 <hr />
                 <div className="company">
-                  <div className="company-header">Web Developer
+                  <div className="company-header">Owner
                   </div>
                 </div>
                 <div className="item">
                     <div className="meta">
                         <div className="upper-row">
-                            <h3 className="job-title">Freelance, Miami, FL</h3>
+                            <h3 className="job-title">ENB Goods, Miami, FL</h3>
                             <div className="time">Jan 2022 - Present</div>
                         </div>{/*<!--//upper-row-->*/}
                     </div>{/*<!--//meta-->*/}
                     <div className="details">
                       <ul className="fa-ul">
-                        <li><i className="fa-li fa fa-angle-right"></i>- Composed responsive websites and evaluate improvement strategies by researching new technologies</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Facilitated positive client relations through professional interaction, issue resolution, and iteration delivery</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Employed multiple cloud-based applications to troubleshoot technical problems and communicate with clients</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Continuously improved project delivery process which expedited customer orders and ensured swift delivery</li>                     </ul>
+                        <li><i className="fa-li fa fa-angle-right"></i>- Orchestrated impactful promotional campaigns, leveraging a diverse range of innovative products to elevate brand visibility, engage target audiences, and drive measurable results</li>
+                        <li><i className="fa-li fa fa-angle-right"></i>- Customized tailored promotional strategies to meet unique client needs, fostering lasting client relationships and consistently exceeding expectations</li>
+                        <li><i className="fa-li fa fa-angle-right"></i>- Successfully expanded business offerings beyond promotional products, integrating web development services, thereby enhancing the agency’s market presence and revenue stream</li>
+                      </ul>
                     </div>{/*<!--//details-->*/}
                 </div>{/*<!--//item-->*/}
                 <hr />
-                <div className="company"><a className="company-header" href="###" target="_blank">Owner</a></div>
+                <div className="company"><a className="company-header" href="###" target="_blank">Operations Manager</a></div>
                 <div className="item">
                     <div className="meta">
                         <div className="upper-row">
