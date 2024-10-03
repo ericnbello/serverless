@@ -2,6 +2,14 @@
 import VisitorCounter from '@/components/VisitorCounter.js';
 import Footer from '../components/Footer.js';
 import '../styles/styles.css';
+import userData from '@/constants/data.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library, IconProp } from '@fortawesome/fontawesome-svg-core'
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function Home() {
   return (
@@ -18,12 +26,12 @@ export default function Home() {
             <div className="contact-container container-block ">
               <h2 className="container-block-title flex justify-center md:justify-start">Contact</h2>
                 <ul className="list-unstyled contact-list">
-                    <li className="email flex justify-center md:justify-start"><i className="fa fa-envelope"></i><a href="mailto:hi@ericnbello.com">hi@ericnbello.com</a></li>
-                    {/* <li className="phone flex justify-center md:justify-start"><i className="fa fa-phone"></i><a href="###">phone number</a></li> */}
-                    <li className="linkedin flex justify-center md:justify-start"><i className="fa fa-linkedin"></i><a rel="noopener" href="https://linkedin.com/in/ericnbello" target="_blank">linkedin/in/ericnbello</a></li>
-                    {/* <li className="medium flex justify-center md:justify-start"><i className="fa fa-medium"></i><a href="###" target="_blank">medium/...</a></li> */}
-                    <li className="github flex justify-center md:justify-start"><i className="fa fa-github"></i><a rel="noopener" href="https://github.com/ericnbello" target="_blank">github/ericnbello</a></li>
-                    <li className="twitter flex justify-center md:justify-start"><i className="fa fa-twitter"></i><a rel="noopener" href="https://twitter.com/ericnbello" target="_blank">@ericnbello</a></li>
+                    <li className="email flex justify-center md:justify-start"><FontAwesomeIcon icon={faEnvelope} className='h-4 pr-2'/><a href={`mailto:${userData.email}`}>{userData.email}</a></li>
+                    {/* <li className='flex' className="phone flex justify-center md:justify-start"><FontAwesomeIcon icon="fa fa-phone" /><a href="###">phone number</a></li> */}
+                    <li className="linkedin flex justify-center md:justify-start"><FontAwesomeIcon icon={faLinkedin} className='h-4 pr-2' /><a rel="noopener" href={`https://linkedin.com/in/${userData.socialHandles.linkedin}`} target="_blank">{`linkedin/in/${userData.socialHandles.linkedin}`}</a></li>
+                    {/* <li className='flex' className="medium flex justify-center md:justify-start"><FontAwesomeIcon icon="fa fa-medium" /><a href="###" target="_blank">medium/...</a></li> */}
+                    <li className="github flex justify-center md:justify-start"><FontAwesomeIcon icon={faGithub} className='h-4 pr-2' /><a rel="noopener" href={`https://github.com/${userData.socialHandles.github}`} target="_blank">{`github/${userData.socialHandles.github}`}</a></li>
+                    <li className="twitter flex justify-center md:justify-start"><FontAwesomeIcon icon={faXTwitter} className='h-4 pr-2' /><a rel="noopener" href={`https://x.com/${userData.socialHandles.twitter}`} target="_blank">{`@${userData.socialHandles.twitter}`}</a></li>
                 </ul>
             </div>
             
@@ -32,11 +40,25 @@ export default function Home() {
                 <h2 className="container-block-title flex justify-center md:justify-start">Education</h2>
                 <div className="item">
                     <h4 className="flex justify-center md:justify-start">Bachelor of Science - Computer Engineering</h4>
-                    <h5 className="meta flex justify-center md:justify-start">Florida International University</h5>
+                    <h5 className="meta flex justify-center md:justify-start pt-2">Florida International University</h5>
                     {/* <div className="time flex justify-center md:justify-start">Years in school</div> */}
                 </div> {/*<!--//item--> */}
             </div> {/*<!--//education-container-->*/}
 
+            {/* Certifications container */}
+            <div className='certifications-container container-block'>
+              <h2 className="container-block-title flex justify-center md:justify-start">Certifications</h2>
+              <div className='grid grid-cols-4 md:grid-cols-2'>
+                {userData.certifications.map((cert, idx) => {
+                  return (
+                    <div key={idx} className='flex justify-center p-2'>
+                      <a href={cert.link}><img className="rounded-full max-h-24" src={cert.imgUrl} alt={`${cert.name} certification badge`}/></a>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+            {/* end of certifications container */}
         </div>
         
         {/* <!--//sidebar-wrapper--> */}
@@ -44,17 +66,17 @@ export default function Home() {
         <div className="main-wrapper">
             <section className="section summary-section">
                 <h2 className="section-title">
-                  {/* <i className="fa fa-user"></i> */}
+                  {/* <FontAwesomeIcon icon="fa fa-user" /> */}
                   Summary</h2>
                 <hr />
                 <div className="summary">
-                    <p>Highly motivated and ambitious cloud operations enthusiast with a background in customer service, technical support, and system administration. Passionate about implementing automated cloud-based solutions and staying updated with the latest technologies to drive seamless operations and enhance business functionality.</p>
+                    <p>{userData.summary}</p>
                 </div> {/*<!--//summary-->*/}
             </section> {/*<!--//section-->*/}
 
             <section className="section summary-section">
                 <h2 className="section-title">
-                  {/* <i className="fa fa-user"></i> */}
+                  {/* <FontAwesomeIcon icon="fa fa-user" /> */}
                   Skills</h2>
                 <hr />
                 <div className="summary">
@@ -84,12 +106,12 @@ export default function Home() {
                 </div>
             </section> {/*<!--//section-->*/}
 
-            <section className="section experiences-section">
+            <section className="section ">
                 <h2 className="section-title">
-                  {/* <i className="fa fa-bar-chart"></i> */}
+                  {/* <FontAwesomeIcon icon="fa fa-bar-chart" /> */}
                   Cloud Projects</h2>
                   {/* PROJECTS SECTION */}
-                
+                <hr />
                 {/* --- PROJECT 1 ----*/}
                 <div className="company">
                   <div className="company-header">Serverless Website
@@ -97,72 +119,80 @@ export default function Home() {
                 </div>
                 <div className="item">
                       <div className="meta">
-                        <div className="upper-row">
-                            {/* <h3 className="job-title">Serverless website built with Next.js, Tailwind, and AWS.</h3> */}
-                            {/* <div className="time">Live demo</div> */}
+                        <div className="upper-row flex justify-between">
+                            <h3 className="job-title">Built a serverless site using AWS services for scalable deployment.</h3>
+                            <div className="time"><a href="https://ericnbello.github.io/serverless-website">Live Demo</a></div>
                         </div> {/*<!--//upper-row-->*/}
                     </div> {/*<!--//meta-->*/}
                     <div className="details">
                       <ul className="fa-ul">
-                        <li><i className="fa-li fa fa-angle-right"></i>- Built responsive, serverless site with view counter</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Website front end is deployed on a custom domain through CloudFront with an S3 origin</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- View counter uses a Lambda function written in Python to update DynamoDB&apos;s atomic counter</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Uses API Gateway to trigger the function and displays the counter using JavaScript</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Automated infrastructure using CloudFormation and AWS Serverless Application Model (SAM)</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- ​​Deployed with GitHub Actions for CI/CD pipeline</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Developed a responsive serverless portfolio website and published on a custom domain via CloudFront with S3 origin</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2"  icon={faAngleRight} />Integrated page view counter using Lambda function (Python), DynamoDB atomic counter, API Gateway</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Generated AWS infrastructure using CloudFormation, Serverless Application Model (SAM), and GitHub Actions</li>
+                        {/* <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Uses API Gateway to trigger the function and displays the counter using JavaScript</li> */}
+                        {/* <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Automated infrastructure using CloudFormation and AWS Serverless Application Model (SAM)</li> */}
+                        {/* <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />​Deployed with GitHub Actions for CI/CD pipeline</li> */}
                       </ul>
                     </div>
                 </div>
                 {/* --END OF PROJECT 1--*/}
 
+
                 {/* --- PROJECT 2 ----*/}
+                <div className="company">
+                  <div className="company-header">Cloud EC2 Server Website
+                  </div>
+                </div>
+                <div className="item">
+                      <div className="meta">
+                        <div className="upper-row flex justify-between">
+                            <h3 className="job-title">Deployed a Django app on AWS with automated Terraform workflows.</h3>
+                            <div className="time"><a href="https://ericnbello.github.io/cloud-server-website">Live Demo</a></div>
+                        </div> {/*<!--//upper-row-->*/}
+                    </div> {/*<!--//meta-->*/}
+                    <div className="details">
+                      <ul className="fa-ul">
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Built a Python Django web app using multiple APIs, containerized with Docker and hosted on AWS EC2 instance</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Automated deployment of AWS resources with Terraform and GitHub Actions using OpenID Connect for credentials</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Secured Terraform state file in versioned S3 backend with DynamoDB table state lock to manage in CI/CD pipeline</li>
+                        {/* <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Configured Window Server 2016 domain settings, server name, TCP/IP settings, and remote desktop</li> */}
+                        {/* <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Created and linked Group Policy Objects (GPO) in Active Directory</li> */}
+                        {/* <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Setup Azure AD Connect for hybrid Azure AD join and seamless SSO using password hash sync</li> */}
+                      </ul>
+                    </div>
+                </div>
+                {/* --END OF PROJECT 2--*/}
+
+
+                {/* --- PROJECT 3 ----*/}
                 <div className="company">
                   <div className="company-header">Active Directory Home Lab
                   </div>
                 </div>
                 <div className="item">
                       <div className="meta">
-                        <div className="upper-row">
-                            {/* <h3 className="job-title">Current Job Title</h3> */}
-                            {/* <div className="time">Live Demo</div> */}
+                        <div className="upper-row flex justify-between">
+                            <h3 className="job-title">Set up AD lab with hybrid Azure integration for seamless SSO.</h3>
+                            <div className="time"><a href="https://ericnbello.github.io/azure-vmware">Live Demo</a></div>
                         </div> {/*<!--//upper-row-->*/}
                     </div> {/*<!--//meta-->*/}
                     <div className="details">
                       <ul className="fa-ul">
-                        <li><i className="fa-li fa fa-angle-right"></i>- Created VMWare home lab consisting of Windows Server 2016 domain controller, linked clones, and RDP</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Added Windows 10 client machines to Windows Server 2016 domain</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Created and modified Active Directory template user accounts to hold various properties</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Configured Window Server 2016 domain settings, server name, TCP/IP settings, and remote desktop</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Created and linked Group Policy Objects (GPO) in Active Directory</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Setup Azure AD Connect for hybrid Azure AD join and seamless SSO using password hash sync</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Deployed VMWare virtual lab with Server 2019 domain controllers and Windows 10 clients on Active Directory (AD)</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Configured TCP/IP settings, remote desktop, and Group Policy Objects (GPOs) for user account management</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Integrated Azure AD Connect for hybrid Azure AD join and seamless single sign-on (SSO) with password hash sync</li>
+                        {/* <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Configured Window Server 2016 domain settings, server name, TCP/IP settings, and remote desktop</li> */}
+                        {/* <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Created and linked Group Policy Objects (GPO) in Active Directory</li> */}
+                        {/* <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Setup Azure AD Connect for hybrid Azure AD join and seamless SSO using password hash sync</li> */}
                       </ul>
                     </div>
                 </div>
-                {/* --END OF PROJECT 2--*/}
-
-                {/* --- PROJECT 3 ----*/}
-                {/* <div className="company">
-                  <div className="company-header">Serverless Website
-                  </div>
-                </div>
-                <div className="item">
-                      <div className="meta">
-                        <div className="upper-row">
-                            <h3 className="job-title">Current Job Title</h3>
-                            <div className="time">XXX - Present</div>
-                        </div>
-                    </div>
-                    <div className="details">
-                      <ul className="fa-ul">
-                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility one.</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility two.</li>
-                      </ul>
-                    </div>
-                </div> */}
                 {/* --END OF PROJECT 3--*/}
 
-                {/* <hr />
-                <div className="company"><a className="company-header" href="###" target="_blank">Previous Company Name,</a> City, State</div>
+              
+
+
+                {/*<div className="company"><a className="company-header" href="###" target="_blank">Previous Company Name,</a> City, State</div>
                 <div className="item">
                     <div className="meta">
                         <div className="upper-row">
@@ -172,8 +202,8 @@ export default function Home() {
                     </div>
                     <div className="details">
                       <ul className="fa-ul">
-                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility one.</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility two.</li>                
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Job responsibility one.</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Job responsibility two.</li>                
                       </ul>
                     </div>
                     <br />
@@ -185,15 +215,15 @@ export default function Home() {
                     </div>
                     <div className="details">
                       <ul className="fa-ul">
-                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility one.</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>Job responsibility two.</li>                </ul>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Job responsibility one.</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Job responsibility two.</li>                </ul>
                     </div>
                 </div> */}
             </section>
 
-            <section className="section projects-section">
+            <section className="section experience-section">
                 <h2 className="section-title">
-                  {/* <i className="fa fa-black-tie"></i> */}
+                  {/* <FontAwesomeIcon icon="fa fa-black-tie" /> */}
                   Experience</h2>
                 <hr />
                 <div className="company">
@@ -203,33 +233,35 @@ export default function Home() {
                 <div className="item">
                     <div className="meta">
                         <div className="upper-row">
-                            <h3 className="job-title">Freelance, Miami, FL</h3>
+                            <h3 className="job-title">Independent/Freelance, Miami, FL</h3>
                             <div className="time">Jan 2022 - Present</div>
                         </div>{/*<!--//upper-row-->*/}
                     </div>{/*<!--//meta-->*/}
                     <div className="details">
                       <ul className="fa-ul">
-                        <li><i className="fa-li fa fa-angle-right"></i>- Composed responsive websites and evaluate improvement strategies by researching new technologies</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Facilitated positive client relations through professional interaction, issue resolution, and iteration delivery</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Employed multiple cloud-based applications to troubleshoot technical problems and communicate with clients</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Continuously improved project delivery process which expedited customer orders and ensured swift delivery</li>                     </ul>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Composed responsive websites and evaluated improvement strategies by researching new technologies</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Facilitated positive client relations through professional interaction, issue resolution, and iteration delivery</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Employed multiple cloud-based applications to troubleshoot technical problems and communicate with clients</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Continuously improved project delivery process which expedited customer orders and ensured swift delivery</li>
+                      </ul>
                     </div>{/*<!--//details-->*/}
                 </div>{/*<!--//item-->*/}
-                <hr />
-                <div className="company"><a className="company-header" href="###" target="_blank">Owner</a></div>
+                <div className="company">
+                  <div className="company-header">Owner</div>
+                </div>
                 <div className="item">
                     <div className="meta">
                         <div className="upper-row">
                             <h3 className="job-title">Solstice Naturals, Miami, FL</h3>
-                            <div className="time">Dec 2016 - Jan 2022</div>
+                            <div className="time">Dec 2016 - Mar 2022</div>
                         </div>{/*<!--//upper-row-->*/}
                     </div>{/*<!--//meta-->*/}
                     <div className="details">
                       <ul className="fa-ul">
-                        <li><i className="fa-li fa fa-angle-right"></i>- Founded online business, overseeing daily operations in technology, product development, and manufacturing</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Transitioned to management role directing day-to-day operations with extensive knowledge of products</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Installed and configured hardware devices and software to meet business requirements</li>
-                        <li><i className="fa-li fa fa-angle-right"></i>- Regularly administered software updates, resolved hardware and network issues on various operating systems</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Founded online business, overseeing daily operations in technology, product development, and manufacturing</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Transitioned to management role directing day-to-day operations with extensive knowledge of products</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Installed and configured hardware devices and software to meet business requirements</li>
+                        <li className='flex'><FontAwesomeIcon className="h-4 pr-2" icon={faAngleRight} />Regularly administered software updates, resolved hardware and network issues on various operating systems</li>
                       </ul>
                     </div>{/*<!--//details-->*/}
                 </div>{/*<!--//item-->*/}

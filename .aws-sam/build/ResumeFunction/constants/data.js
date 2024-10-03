@@ -1,12 +1,15 @@
 const userData = {
-  homepageDescription: "Hey there! Welcome to my clou resume.",
+  homepageDescription: "Hey there! Welcome to my cloud resume.",
   githubUsername: "ericnbello",
   name: "Eric Bello",
   designation: "Cloud Engineer",
   avatarUrl: "/avatar.png",
-  email: "hi@ericnbello.com",
+  email: "ericnbello@icloud.com",
   phone: "",
   address: "Miami, FL",
+  summary: "Driven and adaptable IT professional specializing in cloud infrastructure, automation, and system reliability. Experienced in designing, deploying, and managing scalable cloud-based solutions that enhance operational efficiency and business continuity. Proficient in utilizing cutting-edge tools and methodologies to streamline processes, ensuring robust and resilient systems.",
+  // Areas of expertise include:
+// Highly motivated and ambitious cloud operations enthusiast with a background in customer service, technical support, and system administration. Passionate about implementing automated cloud-based solutions and staying updated with the latest technologies to drive seamless operations and enhance business functionality.",
   articles: [
     {
       pid: "cloud-challenge",
@@ -200,6 +203,13 @@ const userData = {
     twitter: "https://twitter.com/ericnbello",
     linkedin: "https://linkedin.com/in/ericnbello",
     github: "https://github.com/ericnbello",
+    facebook: "",
+  },
+  socialHandles: {
+    instagram: "",
+    twitter: "ericnbello",
+    linkedin: "ericnbello",
+    github: "ericnbello",
     facebook: "",
   },
   certifications: [
