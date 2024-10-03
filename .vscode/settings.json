@@ -1,3 +1,4 @@
 {
-    "ansible.python.interpreterPath": "/Users/ericbello/opt/anaconda3/bin/python"
+    "ansible.python.interpreterPath": "/Users/ericbello/opt/anaconda3/bin/python",
+    "editor.maxTokenizationLineLength": 100000
 }
