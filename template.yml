@@ -9,11 +9,11 @@ Globals:
     MemorySize: 128
      
 Resources:
-  ResumeFunction:
+  CloudResumeFunction3:
     Type: 'AWS::Serverless::Function'
     Properties:
       
-      FunctionName: ResumeFunction
+      FunctionName: CloudResumeFunction3
       CodeUri: ./
       Handler: lambda_function.lambda_handler
       Description: Backend for site view counter
@@ -21,7 +21,7 @@ Resources:
       Policies:
       - DynamoDBCrudPolicy:
           TableName: 
-            Ref: CounterTable2
+            Ref: CounterTable5
         # Give the Lambda service access to poll your DynamoDB Stream
       - AmazonDynamoDBFullAccess
       Events:
@@ -33,7 +33,7 @@ Resources:
             Path: /counter
             Method: get
     Metadata:
-      SamResourceId: ResumeFunction
+      SamResourceId: CloudResumeFunction3
             
   ResumeViewCountApi:
     Type: AWS::Serverless::Api
@@ -41,11 +41,11 @@ Resources:
       Cors:
         AllowMethods: "'GET'"
         AllowOrigin: "'www.cloud.ericnbello.com'"
-      EndpointConfiguration: Regional
+      # EndpointConfiguration: Regional
       OpenApiVersion: 3.0.1
       StageName: Prod
       
-  CounterTable2:
+  CounterTable5:
     Type: AWS::DynamoDB::Table
     Properties:
       AttributeDefinitions: 
@@ -55,4 +55,4 @@ Resources:
       KeySchema: 
         - AttributeName: siteviews
           KeyType: HASH
-      TableName: countertable2
+      TableName: countertable5
