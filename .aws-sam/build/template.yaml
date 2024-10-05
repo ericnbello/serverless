@@ -24,18 +24,17 @@ Resources:
           Type: Api
           Properties:
             RestApiId:
-              Ref: ResumeViewCountApi
+              Ref: CloudResumeViewCountApi
             Path: /counter
             Method: get
     Metadata:
       SamResourceId: CloudResumeFunction3
-  ResumeViewCountApi:
+  CloudResumeViewCountApi:
     Type: AWS::Serverless::Api
     Properties:
       Cors:
         AllowMethods: '''GET'''
         AllowOrigin: '''www.cloud.ericnbello.com'''
-      # EndpointConfiguration: Regional
       OpenApiVersion: 3.0.1
       StageName: Prod
   CounterTable5:
