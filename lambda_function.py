@@ -27,15 +27,6 @@ def lambda_handler(event, context):
     body = table.scan()
     items = replace_decimals(body['Items'])
     
-    # data = client.get_item(
-    #     TableName='countertable',
-    #     Key = {
-    #         'siteviews': {'N': '0'}
-    #     }
-    # )
-    
-    #data['Item']['Quantity']['N'] = str(int(data['Item']['Quantity']['N']) + 1)
-    
     response = client.update_item(
         TableName='countertable5',
         Key = {
