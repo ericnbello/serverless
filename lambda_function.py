@@ -22,13 +22,11 @@ def replace_decimals(obj):
         return obj
         
 def lambda_handler(event, context):
-    
-    table = dynamodb.Table('countertable5')
+    table = dynamodb.Table('countertable7')
     body = table.scan()
     items = replace_decimals(body['Items'])
-    
     response = client.update_item(
-        TableName='countertable5',
+        TableName='countertable7',
         Key = {
             'siteviews': {'N': '0'},
         },

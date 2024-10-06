@@ -1,10 +1,7 @@
-// import VisitorCounter from '../components/VisitorCounter.js';
-import VisitorCounter from '@/components/VisitorCounter.js';
 import Footer from '../components/Footer.js';
 import '../styles/styles.css';
 import userData from '@/constants/data.js';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { library, IconProp } from '@fortawesome/fontawesome-svg-core'
 import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';

@@ -1,8 +1,8 @@
 version = 0.1
 [default.deploy.parameters]
-stack_name = "sam-cloud-resume-3"
-resolve_s3 = false
-s3_prefix = "sam-cloud-resume-3"
+stack_name = "sam-portfolio-2"
+resolve_s3 = true
+s3_prefix = "sam-portfolio-2"
 region = "us-east-1"
 capabilities = "CAPABILITY_IAM"
 disable_rollback = true
