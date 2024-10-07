@@ -41,7 +41,7 @@ Resources:
       Cors:
         AllowMethods: "'GET'"
         AllowOrigin: "'www.cloud.ericnbello.com'"
-      # EndpointConfiguration: Regional
+      EndpointConfiguration: Regional
       OpenApiVersion: 3.0.1
       StageName: Prod
       
@@ -57,11 +57,11 @@ Resources:
           KeyType: HASH
       TableName: countertable7
     
-    Metadata:
-      BuildMethod: esbuild
-      BuildProperties:
-        Minify: true
-        Target: "es2020"
-        Sourcemap: true,
-        EntryPoints: 
-        - page.tsx
+    # Metadata:
+    #   BuildMethod: esbuild
+    #   BuildProperties:
+    #     Minify: true
+    #     Target: "es2020"
+    #     Sourcemap: true,
+    #     EntryPoints: 
+    #     - page.tsx
