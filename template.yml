@@ -14,7 +14,7 @@ Resources:
     Properties:
       
       FunctionName: ResumeFunction5
-      CodeUri: ./
+      CodeUri: ./functions
       Handler: lambda_function.lambda_handler
       Description: Backend for site view counter
       Timeout: 3
@@ -56,3 +56,12 @@ Resources:
         - AttributeName: siteviews
           KeyType: HASH
       TableName: countertable7
+    
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "es2020"
+        Sourcemap: true,
+        EntryPoints: 
+        - page.tsx
