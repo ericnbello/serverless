@@ -10,7 +10,7 @@ export default function VisitorCounter() {
 
     useEffect(() => {
         async function getCount() {
-            const response = await fetch('https://uim0epv297.execute-api.us-east-1.amazonaws.com/Prod/counter');
+            const response = await fetch('https://cbq78s9fa0.execute-api.us-east-1.amazonaws.com/Prod/counter');
             const data = await response.json();
             console.log(data)
             setCount(data);
