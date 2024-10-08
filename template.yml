@@ -40,7 +40,7 @@ Resources:
     Properties:
       Cors:
         AllowMethods: "'GET'"
-        AllowOrigin: "'www.cloud-resume.ericnbello.com'"
+        AllowOrigin: "'https://www.cloud-resume.ericnbello.com'"
       EndpointConfiguration: Regional
       OpenApiVersion: 3.0.1
       StageName: Prod
