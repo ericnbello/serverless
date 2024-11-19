@@ -231,7 +231,7 @@ export default function Home() {
                     <div className="meta">
                         <div className="upper-row">
                             <h3 className="job-title">Independent/Freelance, Miami, FL</h3>
-                            <div className="time">Jan 2022 - Present</div>
+                            <div className="time">Mar 2022 - Present</div>
                         </div>{/*<!--//upper-row-->*/}
                     </div>{/*<!--//meta-->*/}
                     <div className="details">
