@@ -118,7 +118,7 @@ export default function Home() {
                       <div className="meta">
                         <div className="upper-row flex justify-between">
                             <h3 className="job-title">Built a serverless site using AWS services for scalable deployment.</h3>
-                            <div className="time"><a href="https://ericnbello.github.io/serverless-website">Live Demo</a></div>
+                            <div className="time"><a href="https://ericnbello.github.io/serverless">Live Demo</a></div>
                         </div> {/*<!--//upper-row-->*/}
                     </div> {/*<!--//meta-->*/}
                     <div className="details">
@@ -144,7 +144,7 @@ export default function Home() {
                       <div className="meta">
                         <div className="upper-row flex justify-between">
                             <h3 className="job-title">Deployed a Django app on AWS with automated Terraform workflows.</h3>
-                            <div className="time"><a href="https://ericnbello.github.io/cloud-server-website">Live Demo</a></div>
+                            <div className="time"><a href="https://ericnbello.github.io/docker-ec2">Live Demo</a></div>
                         </div> {/*<!--//upper-row-->*/}
                     </div> {/*<!--//meta-->*/}
                     <div className="details">
