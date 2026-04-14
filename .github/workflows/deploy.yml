@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 16
+          node-version: 20
       - run: npm install
       - run: npm ci
       - run: npm run build
@@ -23,7 +23,7 @@ jobs:
       - name: Sync cloud resume to S3 bucket
         run: aws s3 sync ./out s3://${{ secrets.AWS_S3_BUCKET }} --follow-symlinks
       - name: Invalidate CloudFront
-        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths "/"
+        run: aws cloudfront create-invalidation --distribution-id ${{ secrets.DISTRIBUTION_ID }} --paths "/*"
       
       - uses: actions/setup-python@v3
       - uses: aws-actions/setup-sam@v2
