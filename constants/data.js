@@ -4,7 +4,7 @@ const userData = {
   name: "Eric Bello",
   designation: "Cloud Engineer",
   avatarUrl: "/avatar.png",
-  email: "ericnbello@icloud.com",
+  email: "ericnbello@gmail.com",
   phone: "",
   address: "Miami, FL",
   summary: "Driven and adaptable IT professional specializing in cloud infrastructure, automation, and system reliability. Experienced in designing, deploying, and managing scalable cloud-based solutions that enhance operational efficiency and business continuity. Proficient in utilizing cutting-edge tools and methodologies to streamline processes, ensuring robust and resilient systems.",
